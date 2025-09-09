@@ -12,7 +12,7 @@
     <!-- Social Media / Open Graph -->
     <meta property="og:title" content="TIDY TEAM - Professional Cleaning & Caretaking Services">
     <meta property="og:description" content="Reliable cleaning and caretaking services in British Columbia. Get a free quote today!">
-    <meta property="og:image" content=images/TIDY.jpg> <!-- TODO: Replace with a real image URL -->
+    <meta property="og:image" content="images/TIDY.jpg"> 
     <meta property="og:url" content="https://www.yourwebsite.com/"> <!-- TODO: Replace with your final domain -->
     <meta name="twitter:card" content="summary_large_image">
 
@@ -117,8 +117,7 @@
                 <div class="team-grid">
                     <!-- Christina's Profile -->
                     <div class="team-member slide-in-left">
-                        <!-- TODO: Replace with Christina's photo -->
-                        <img src=images/christina-profile.jpeg alt="Christina, Co-founder of Tidy Team">
+                        <img src="images/christina-profile.jpeg" alt="Christina, Co-founder of Tidy Team">
                         <h3>Christina</h3>
                         <p class="team-title">Co-Founder & Operator</p>
                         <p>With over eight years of hands-on experience and as a certified cleaning auditor, I have a sharp eye for the details others might miss. My background in long-term care taught me the importance of cleaning for health and safety, a standard I bring to every job.</p>
@@ -126,8 +125,7 @@
 
                     <!-- Vladimir's Profile -->
                     <div class="team-member slide-in-right">
-                        <!-- TODO: Replace with Vladimir's photo -->
-                        <img src=images/vlad-profile.jpeg alt="Vladimir, Co-founder of Tidy Team">
+                        <img src="images/vlad-profile.jpeg" alt="Vladimir, Co-founder of Tidy Team">
                         <h3>Vladimir</h3>
                         <p class="team-title">Co-Founder & Operator</p>
                         <p>With four years of experience across residential and commercial settings, I take pride in being dependable and meticulous. I am committed to adapting to each client’s unique needs while delivering a consistently high standard of quality and care.</p>
@@ -136,8 +134,7 @@
 
                 <!-- Mascot Section -->
                 <div class="mascot-section fade-in">
-                    <!-- TODO: Replace with Blue's photo -->
-                    <img src=images/blue-the-cat-mascot.jpeg alt="Blue, the Tidy Team cat mascot">
+                    <img src="images/blue-the-cat-mascot.jpeg" alt="Blue, the Tidy Team cat mascot">
                     <h3>A Word From Our Mascot</h3>
                     <p>Blue, the Tidy Team cat, says thank you for stopping by!</p>
                 </div>
@@ -175,8 +172,21 @@
                         <div class="contact-item"><i class="fas fa-clock"></i><div><strong>Business Hours:</strong><br>Mon-Fri: 7AM-7PM<br>Sat-Sun: 8AM-6PM</div></div>
                     </div>
                     <div class="contact-form slide-in-right">
-                        <!-- TODO: Replace the action URL with your own from Formspree, Netlify Forms, etc. -->
-                        <form id="contactForm" name="contact" method="POST" data-netlify="true">
+                        <form 
+                            id="contactForm" 
+                            name="contact" 
+                            method="POST" 
+                            action="/thank-you/" 
+                            data-netlify="true" 
+                            data-netlify-honeypot="bot-field">
+
+                            <!-- Netlify hidden inputs for form identification and bot protection -->
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p class="hidden">
+                                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                            </p>
+                            
+                            <!-- Visible Form Fields -->
                             <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required></div>
                             <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
                             <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone"></div>
